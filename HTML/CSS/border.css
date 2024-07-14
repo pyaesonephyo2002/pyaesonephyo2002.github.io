@@ -1,0 +1,27 @@
+h1{
+    text-align: center;
+    color: red;
+}
+
+.borderone{
+    border: px dotted red;
+}
+
+.bordertwo{
+    border-top: 10px solid yellow;
+    border-left: 10px solid yellow;
+
+}
+
+.borderthree{
+    border-color: brown yellow;
+    border-style: solid dotted double dashed;
+
+}
+
+
+
+.borderwidth{
+    border-style: solid;
+    border-width: 3px 30px;
+}

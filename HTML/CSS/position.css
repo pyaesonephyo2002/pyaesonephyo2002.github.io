@@ -1,0 +1,39 @@
+.parent_absolute{
+    width: 1200px;
+    height: 500px;
+    border: 2px solid black;
+    position: relative;
+
+}
+.absolute{
+    width: 400px;
+    height: 200px;
+    border: 2px solid rebeccapurple;
+    position: absolute;
+    top: 10px;
+    left: 150px;
+    
+}
+
+
+.parent_relative{
+    width: 1200px;
+    height: 500px;
+    border: 2px solid yellowgreen;
+
+}   
+
+.relative{
+    width: 400px;
+    height: 200px;
+    border: 2px solid saddlebrown;
+    position: relative;
+    top: 10px;
+    left: 150px;
+
+}
+.fixed{
+    position: fixed;
+    top: 50px;
+    right: 100px;
+}

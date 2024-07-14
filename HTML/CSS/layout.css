@@ -1,0 +1,11 @@
+.inline{
+    border: 2px solid red;
+    display: inline-block;
+    width: 400px;
+
+.block{
+    border: 2px solid green;
+    width: 40px;
+    display: inline-block;
+}
+}

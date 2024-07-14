@@ -1,0 +1,98 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* start nav */
+.nav_logo{
+    width: 200px;
+    height: 90px;
+    margin-left: 120px;
+    margin-top: 10px;
+}
+.nav_item{
+    float: right;
+}
+.nav_item li{
+    display: inline-block;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+.nav_item li a{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+}
+.nav{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.nav_item li a:hover{
+    color: rgb(168, 144, 4);
+}
+.cart_nav_item{
+    margin-right: 30px;
+}
+.cart_noti{
+    position: relative;
+    top: -20px;
+    right: 40px;
+    background-color: rgb(168, 144, 4);
+    padding: 5px;
+    border-radius: 50%;
+    color: white;
+}
+/* end nav */
+
+/* start bunner */
+.carousel_img{
+    width: 100%;
+}
+.carousel_text{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+.carousel_text h2{
+    margin-bottom: 15px;
+}
+.shop_now{
+    margin-top: 20px;
+    background-color: rgb(168, 144, 4);
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid rgb(168, 144, 4);
+    border-radius: 5px;
+}
+.shop_now:hover{
+    cursor: pointer;
+}
+/* end bunner */
+
+/* start icon line */
+.icons{
+    margin-top: 30px;
+    margin-left: 80px;    
+    margin-bottom: 20px;     
+}
+.promotion_section{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    padding: 15px;
+    width: 20%;
+    border-radius: 5px;
+    margin-right: 10px;
+
+}
+.icon{
+    margin-right: 20px;
+    float: left; 
+ 
+    
+}
+.icon_text{
+    color: rgba(0, 0, 0, 0.8);
+}
+/* end icon line */
