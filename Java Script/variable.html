@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable</title>
+</head>
+<body>
+    <h1>Three types of variable</h1>
+
+    <script>
+        // global variable
+        var pico = "pyae sone phyo";
+        console.log(pico);
+        name = "pico phyo update";
+        console.log(name);
+
+
+        // block scope variable
+
+        let fathername = "U Hla";
+        console.log(fathername);
+        fathername = "U Mya update"
+        console.log(fathername);
+
+
+        var num = 2;
+        if (num) {
+            var num1 = 2;
+            let num2 = 3;
+            document.write(num2);
+        }
+        document.write(num1);
+
+
+
+
+        // constant variable
+
+        const motherName = "Daw khin khin san";
+        console.log(motherName);
+    </script>
+</body>
+</html>
