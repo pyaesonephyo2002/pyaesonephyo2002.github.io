@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    form{
+        width: 40%;
+        margin: auto;
+    }
+
+
+    input{
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    button{
+        padding: 10px 20px;
+
+    }
+
+
+</style>
+<body>
+    <h1 style="text-align: center; color: red;">Your Login</h1>
+
+    <form action="home.php" method="post">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+
+        <button type="submit" onclick=" return checkvalidation()">Login</button>
+    </form>
+
+    <script>
+        function checkvalidation(){
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+
+            return false;
+            console.log(email,password);
+        }
+
+        if (email == "" && password ==""){
+            let emailError =document.getElementById('email');
+            let emailErrorMessge = document.getElementById('emailErrorMessage');
+            emailError.style.border = "1px solid red";
+            emailErrorMessge.innerHTML = "Please Fill Your Email";
+            emailError.style.color = "red";
+            emailError.style.margin = "0px";
+
+
+        }
+    </script>
+</body>
+</html>
