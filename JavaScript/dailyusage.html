@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        table{
+            width: 50%;
+            height: 15px;
+            margin-left: 250px;
+        }
+        form{
+            margin-left: 250px;
+        }
+        input{
+            width: 40%;
+            height: 25px;
+            margin-bottom: 15px;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(19, 17, 17);">Usage</h1>
+    <form action="" name="dailyUse">
+        <label for="date">Date :</label><br>
+        <input type="date" name="date"><br>
+        <label for="name">Item Name :</label><br>
+        <input type="name" name="name"><br>
+        <label for="price">Price :</label><br>
+        <input type="number" name="price"><br>
+        <button type="button" onclick="showData()">Submit</button>
+    </form>
+
+    <h1 style="text-align: center;">Daily Usage</h1>
+
+
+
+    <table border="1" cellpadding="15" cellspaceing="1">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Item Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody id="myExpense">
+            
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Total</td>
+                <td id="totalExpense">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+
+    <script>
+        var usageArray = [];
+        function showData() {
+            let date = document.dailyUse.date.value;
+            let name = document.dailyUse.name.value;
+            let price =parseInt( document.dailyUse.price.value);
+            // console.log(showData);
+
+            let usage = {
+                usage_date : date,
+                usage_name : name,
+                usage_price : price
+            }
+
+            usageArray.push(usage);
+            // console.log(usageArray);
+
+            getData();
+        }
+        function getData() {
+            let total = 0;
+            let detail = '';
+            for (let u = 0; u < usageArray.length; u++) {
+                let usageObj = usageArray[u];
+
+                detail +=  `<tr>
+                                <td>${usageObj.usage_date}</td> 
+                                <td>${usageObj.usage_name}</td>  
+                                <td>${usageObj.usage_price}</td>   
+                            </tr>`;
+
+                total += usageObj.usage_price;
+            }
+            document.getElementById('myExpense').innerHTML=detail;
+            document.getElementById('totalExpense').textContent= parseInt(total);
+        }
+            
+       
+    </script>
+</body>
+</html>
