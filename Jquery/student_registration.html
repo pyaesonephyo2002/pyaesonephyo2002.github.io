@@ -54,6 +54,8 @@
 
 <script>
     $(document).ready(function(){
+        let data ='';
+        let j = 1;
         $('#add').click(function(){
             let name = $('#name').val();
             let email = $('#email').val();
@@ -98,19 +100,20 @@
                 //console.log(showStuArray);
 
                 //$.each(array,function(key,value){})
-                $.each(showStuArray, function(i,v){
+                $.each(showStuArray, function(i,v){ 
                     //console.log("This is key"+i);
                     //console.log(v.stu_name);
-                    data+= `<tr>
+                    data += `<tr>
                         <td>${j++}</td>
                         <td>${v.stu_name}</td>
                         <td>${v.stu_email}</td>
                         <td>${v.stu_phone}<td>
                         <td>${v.stu_year}</td>
-                        </tr>`
+                        </tr>`;
                 })
-                $('tbody').html(data);
-            }
+                
+                $('#tbody').html(data);
+            }   
         })
     })
 </script>
