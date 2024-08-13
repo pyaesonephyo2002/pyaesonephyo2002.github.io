@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Shop(Check Out)</title>
+
+
+
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.qty-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.qty-input {
+    width: 50px;
+    text-align: center;
+}
+
+.total {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.order-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    border-radius: 4px;
+}
+
+.order-btn:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>IT Shop</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Item Name</th>
+                    <th>Item Price</th>
+                    <th>Qty</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Laptop 1</td>
+                    <td>2300000 MMK</td>
+                    <td>
+                        <button class="qty-btn" data-id="1" data-action="decrement">-</button>
+                        <input type="text" id="qty-1" value="1" class="qty-input">
+                        <button class="qty-btn" data-id="1" data-action="increment">+</button>
+                    </td>
+                    <td id="amount-1">2300000 MMK</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Laptop 2</td>
+                    <td>2000000 MMK</td>
+                    <td>
+                        <button class="qty-btn" data-id="2" data-action="decrement">-</button>
+                        <input type="text" id="qty-2" value="1" class="qty-input">
+                        <button class="qty-btn" data-id="2" data-action="increment">+</button>
+                    </td>
+                    <td id="amount-2">2000000 MMK</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <strong>Total:</strong> <span id="total-amount">4300000 MMK</span>
+        </div>
+        <button class="order-btn">Order Now</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7..1.min.js"></script>
+    <script>
+
+$(document).ready(function() {
+    function updateAmount(id) {
+        const pricePerItem = parseInt($(`#qty-${id}`).parent().siblings().eq(1).text().replace(' MMK', ''));
+        const quantity = parseInt($(`#qty-${id}`).val());
+        const amount = pricePerItem * quantity;
+        $(`#amount-${id}`).text(amount + ' MMK');
+        updateTotal();
+    }
+
+    function updateTotal() {
+        let total = 0;
+        $('[id^="amount-"]').each(function() {
+            total += parseInt($(this).text().replace(' MMK', ''));
+        });
+        $('#total-amount').text(total + ' MMK');
+    }
+
+    $('.qty-btn').on('click', function() {
+        const id = $(this).data('id');
+        const action = $(this).data('action');
+        let quantity = parseInt($(`#qty-${id}`).val());
+        
+        if (action === 'increment') {
+            quantity++;
+        } else if (action === 'decrement' && quantity > 1) {
+            quantity--;
+        }
+        
+        $(`#qty-${id}`).val(quantity);
+        updateAmount(id);
+    });
+
+    $('.qty-input').on('input', function() {
+        const id = $(this).attr('id').split('-')[1];
+        updateAmount(id);
+    });
+});
+Explanation
+    </script>
+</body>
+</html>
