@@ -10,12 +10,12 @@
 
     <div id="add_student">
 
-        <h1>Add Student Registrations here</h1>
+        <h1>Add Student Registration</h1>
 
         Name: <input type="name" name="name" id="name"><br><br>
         Emai: <input type="email" name="email" id="email"><br><br>
         Phone: <input type="phone" name="phone" id="phone"><br><br>
-        Years: <select name="year" id="year">
+        Year: <select name="year" id="year">
             <option value="">Choose Year</option>
             <option value="First">First Year</option>
             <option value="Second">Second Year</option>
@@ -29,12 +29,14 @@
     <br><br>
 
 
-    <h1>Update Student Registration</h1>
-        
-        Name: <input type="name" name="name" id="name"><br><br>
-        Emai: <input type="email" name="email" id="email"><br><br>
-        Phone: <input type="phone" name="phone" id="phone"><br><br>
-        Years: <select name="year" id="year">
+    <div id="edit_student">
+
+        <h1>Update Student Registration</h1>
+
+        Name: <input type="name" name="name" id="edit-name"><br><br>
+        Emai: <input type="email" name="email" id="edit-email"><br><br>
+        Phone: <input type="phone" name="phone" id="edit-phone"><br><br>
+        Year: <select name="year" id="edit- year">
             <option value="">Choose Year</option>
             <option value="First">First Year</option>
             <option value="Second">Second Year</option>
@@ -43,7 +45,7 @@
 
         <br><br>
 
-        <button type="button" id="add">Add</button>
+        <button type="button" id="update">Update</button>
     </div>
     <br><br>
 
@@ -57,7 +59,6 @@
                 <th>Phone</th>
                 <th>Year</th>
                 <th>Action</th>
-
 
 
             </tr>
@@ -75,42 +76,40 @@
 
 <script>
     $(document).ready(function(){
-<<<<<<< HEAD
         getData();
-        function getData() {
-            let getStuString = localStorage.getItem('students');
-            if(getStuString){
-                showStuArray = JSON.parse(getStuString);
+        $("edit_student").hide();
+        function getData(){
+            let getStustring = localStorage.getItem('students');
+            if(getStustring) {
+                showStuArray = JSON.parse(getStustring);
                 console.log(showStuArray);
-
-
                 //$.each(array,function(key,value){})
-                let data = '';
-                let j = 1;
-                $.each(showStuArray, function(i,v){
-                    //comsole.log("This is key"+i);
-                    //console.log(v.stu_name);
 
+                let data ='';
+                let j = 1;
+                
+                $.each(showStuArray, function(i,v){ 
+                    //console.log("This is key"+i);
+                    //console.log(v.stu_name);
                     data += `<tr>
-                             <td>${j++}</td>
-                             <td>${v.stu_name}</td>
-                             <td>${v.stu_email}</td>
-                             <td>${v.stu_phone}</td>
-                             <td>${v.stu_year}</td>
-                            <td>
-                                <button class="edit">Edit</button>
-                                <button class="delete">Delete</button>
-                             </tr>`;
+                    <td>${j++}</td>
+                    <td>${v.stu_name}</td>
+                    <td>${v.stu_email}</td>
+                    <td>${v.stu_phone}</td>
+                    <td>${v.stu_year}</td>
+                    <td>
+                        <button class="edit" data-key="${i}" data-name="${v.stu_name}" data-email="${v.stu_email}" data-phone="${v.stu_phone}" data-year="${v.stu_year}" >Edit</button>
+                        <button class="delete" data-key="${i}">Delete</button>
+                    </td>
+                </tr>`;
 
                 })
+                
                 $('#tbody').html(data);
-            }
-        }
 
-=======
-        let data ='';
-        let j = 1;
->>>>>>> dadf37fef7baf9fa1de7a9a60a648d66a81c16f2
+            }   
+
+        }
         $('#add').click(function(){
             let name = $('#name').val();
             let email = $('#email').val();
@@ -119,16 +118,17 @@
 
             console.log(name,email,phone,year);
             
-            let students ={
+            let students = {
                 stu_name: name,
                 stu_email: email,
                 stu_phone: phone,
                 stu_year: year
             }
-            console.log(students);
+            // console.log(students);
 
 
             let stuString = localStorage.getItem('students');//get local storage
+            // console.log(stuString);
             let stuArray = [];
 
             if(stuString == null){
@@ -148,47 +148,47 @@
             //// console.log(studentData);
 
             localStorage.setItem('students', studentData);// set data to localstorage
-
-            let getStustring = localStorage.getItem('students');
-            if(getStustring) {
-                showStuArray = JSON.parse(getStustring);
-                //console.log(showStuArray);
-
-                //$.each(array,function(key,value){})
-                $.each(showStuArray, function(i,v){ 
-                    //console.log("This is key"+i);
-                    //console.log(v.stu_name);
-                    data += `<tr>
-                        <td>${j++}</td>
-                        <td>${v.stu_name}</td>
-                        <td>${v.stu_email}</td>
-                        <td>${v.stu_phone}<td>
-                        <td>${v.stu_year}</td>
-                        </tr>`;
-                })
-                
-                $('#tbody').html(data);
-            }   
-        })
-        
-        $('#tbody').on('click', '.delete', function() {
-                let key = $(this).data('key');
-                let ans = confirm("Are you sure you want to delete?");
-                if (ans) {
-                    let getStuString = localStorage.getItem('students');
-                    if (getStuString) {
-                        let stuArr = JSON.parse(getStuString);
-                        stuArr.splice(key, 1);
-                        localStorage.setItem('students', JSON.stringify(stuArr));
-                        getData();
-                    }
-                }
-            });
-
             getData();
-        });
 
+        })
+   
+        $('#tbody').on('click','.delete',function(){
+            let key = $(this).data('key');
+            // alert(key);
+            let ans = confirm("Are you sure to delete");
+            // alert(ans);
 
+            if (ans){
+                let getStustring = localStorage.getItem('students');
+                if(getStustring){
+                    let stuArr = JSON.parse(getStustring);
+                    console.log(stuArr);
+                    stuArr.splice(key,1);//splice  
+                    console.log(stuArr);    
+
+                    let studentData = JSON.stringify(stuArr);
+                    localStorage.setItem('students', studentData);
+                    getData();
+                }   
+            }
+        })
+   
+        $('#tbody').on('click','.edit',function(){
+            let key = $(this).data('key');
+            let name = $(this).data('name');
+            let email = $(this).data('email');
+            let phone= $(this).data('phone');
+            let year= $(this).data('year');
+
+            console.log(key,name,email,phone,year);
+
+            // alert(key);
+            $("#add_student").hide();
+            $("edit_student").show();
+        })
+   
+   
+   })
 </script>
 </body>
 </html>
