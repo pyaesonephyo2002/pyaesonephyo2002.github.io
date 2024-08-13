@@ -10,7 +10,7 @@
 
     <div id="add_student">
 
-        <h1>Add Student Registration</h1>
+        <h1>Add Student Registrations here</h1>
 
         Name: <input type="name" name="name" id="name"><br><br>
         Emai: <input type="email" name="email" id="email"><br><br>
@@ -75,6 +75,7 @@
 
 <script>
     $(document).ready(function(){
+<<<<<<< HEAD
         getData();
         function getData() {
             let getStuString = localStorage.getItem('students');
@@ -106,6 +107,10 @@
             }
         }
 
+=======
+        let data ='';
+        let j = 1;
+>>>>>>> dadf37fef7baf9fa1de7a9a60a648d66a81c16f2
         $('#add').click(function(){
             let name = $('#name').val();
             let email = $('#email').val();
@@ -139,11 +144,31 @@
             console.log(stuArray);
 
 
-            let studentData =JSON.stringify(stuArray);
+            let studentData =JSON.stringify(stuArray);//json array to json string
             //// console.log(studentData);
 
-            localStorage.setItem('students', studentData);
+            localStorage.setItem('students', studentData);// set data to localstorage
 
+            let getStustring = localStorage.getItem('students');
+            if(getStustring) {
+                showStuArray = JSON.parse(getStustring);
+                //console.log(showStuArray);
+
+                //$.each(array,function(key,value){})
+                $.each(showStuArray, function(i,v){ 
+                    //console.log("This is key"+i);
+                    //console.log(v.stu_name);
+                    data += `<tr>
+                        <td>${j++}</td>
+                        <td>${v.stu_name}</td>
+                        <td>${v.stu_email}</td>
+                        <td>${v.stu_phone}<td>
+                        <td>${v.stu_year}</td>
+                        </tr>`;
+                })
+                
+                $('#tbody').html(data);
+            }   
         })
         
         $('#tbody').on('click', '.delete', function() {
