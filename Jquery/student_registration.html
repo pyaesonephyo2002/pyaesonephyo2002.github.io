@@ -28,6 +28,25 @@
     </div>
     <br><br>
 
+
+    <h1>Update Student Registration</h1>
+        
+        Name: <input type="name" name="name" id="name"><br><br>
+        Emai: <input type="email" name="email" id="email"><br><br>
+        Phone: <input type="phone" name="phone" id="phone"><br><br>
+        Years: <select name="year" id="year">
+            <option value="">Choose Year</option>
+            <option value="First">First Year</option>
+            <option value="Second">Second Year</option>
+            <option value="Third">Third Year</option>
+        </select>
+
+        <br><br>
+
+        <button type="button" id="add">Add</button>
+    </div>
+    <br><br>
+
     <table border="1" cellpadding="25" cellspacing="0">
 
         <thead>
@@ -37,6 +56,8 @@
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Year</th>
+                <th>Action</th>
+
 
 
             </tr>
@@ -54,6 +75,37 @@
 
 <script>
     $(document).ready(function(){
+        getData();
+        function getData() {
+            let getStuString = localStorage.getItem('students');
+            if(getStuString){
+                showStuArray = JSON.parse(getStuString);
+                console.log(showStuArray);
+
+
+                //$.each(array,function(key,value){})
+                let data = '';
+                let j = 1;
+                $.each(showStuArray, function(i,v){
+                    //comsole.log("This is key"+i);
+                    //console.log(v.stu_name);
+
+                    data += `<tr>
+                             <td>${j++}</td>
+                             <td>${v.stu_name}</td>
+                             <td>${v.stu_email}</td>
+                             <td>${v.stu_phone}</td>
+                             <td>${v.stu_year}</td>
+                            <td>
+                                <button class="edit">Edit</button>
+                                <button class="delete">Delete</button>
+                             </tr>`;
+
+                })
+                $('#tbody').html(data);
+            }
+        }
+
         $('#add').click(function(){
             let name = $('#name').val();
             let email = $('#email').val();
@@ -93,7 +145,25 @@
             localStorage.setItem('students', studentData);
 
         })
-    })
+        
+        $('#tbody').on('click', '.delete', function() {
+                let key = $(this).data('key');
+                let ans = confirm("Are you sure you want to delete?");
+                if (ans) {
+                    let getStuString = localStorage.getItem('students');
+                    if (getStuString) {
+                        let stuArr = JSON.parse(getStuString);
+                        stuArr.splice(key, 1);
+                        localStorage.setItem('students', JSON.stringify(stuArr));
+                        getData();
+                    }
+                }
+            });
+
+            getData();
+        });
+
+
 </script>
 </body>
 </html>
