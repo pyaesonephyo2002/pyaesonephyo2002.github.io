@@ -3,76 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT Shop(Check Out)</title>
-
-
-
-    <style>
-        body {
+    <title>IT Shop Checkout</title>
+<style>
+    body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
 }
 
 .container {
-    max-width: 600px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
     padding: 20px;
-    background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 20px;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
 th, td {
-    text-align: left;
     padding: 10px;
+    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
-.qty-btn {
-    padding: 5px 10px;
-    border: none;
-    background-color: #007bff;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-.qty-input {
-    width: 50px;
+input[type="text"] {
+    width: 40px;
     text-align: center;
 }
 
-.total {
-    text-align: right;
-    margin-top: 20px;
-    font-size: 1.2em;
+button.minus, button.plus {
+    padding: 5px 10px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-.order-btn {
+button.minus:hover, button.plus:hover {
+    background-color: #ddd;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+button.order-btn {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     background-color: #28a745;
-    color: #ffffff;
+    color: white;
     border: none;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 1.1em;
-    border-radius: 4px;
 }
 
-.order-btn:hover {
+button.order-btn:hover {
     background-color: #218838;
 }
-    </style>
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -91,74 +93,81 @@ th, td {
                 <tr>
                     <td>1</td>
                     <td>Laptop 1</td>
-                    <td>2300000 MMK</td>
+                    <td id="price1">2300000 MMK</td>
                     <td>
-                        <button class="qty-btn" data-id="1" data-action="decrement">-</button>
-                        <input type="text" id="qty-1" value="1" class="qty-input">
-                        <button class="qty-btn" data-id="1" data-action="increment">+</button>
+                        <button class="minus" data-target="qty1">-</button>
+                        <input type="text" id="qty1" value="3">
+                        <button class="plus" data-target="qty1">+</button>
                     </td>
-                    <td id="amount-1">2300000 MMK</td>
+                    <td id="amount1">6900000 MMK</td>
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>Laptop 2</td>
-                    <td>2000000 MMK</td>
+                    <td id="price2">2000000 MMK</td>
                     <td>
-                        <button class="qty-btn" data-id="2" data-action="decrement">-</button>
-                        <input type="text" id="qty-2" value="1" class="qty-input">
-                        <button class="qty-btn" data-id="2" data-action="increment">+</button>
+                        <button class="minus" data-target="qty2">-</button>
+                        <input type="text" id="qty2" value="3">
+                        <button class="plus" data-target="qty2">+</button>
                     </td>
-                    <td id="amount-2">2000000 MMK</td>
+                    <td id="amount2">6000000 MMK</td>
                 </tr>
             </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4">Total</td>
+                    <td id="total">12900000 MMK</td>
+                </tr>
+            </tfoot>
         </table>
-        <div class="total">
-            <strong>Total:</strong> <span id="total-amount">4300000 MMK</span>
-        </div>
         <button class="order-btn">Order Now</button>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.7..1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script>
 
 $(document).ready(function() {
-    function updateAmount(id) {
-        const pricePerItem = parseInt($(`#qty-${id}`).parent().siblings().eq(1).text().replace(' MMK', ''));
-        const quantity = parseInt($(`#qty-${id}`).val());
-        const amount = pricePerItem * quantity;
-        $(`#amount-${id}`).text(amount + ' MMK');
-        updateTotal();
+    function calculateAmount(id) {
+        let qty = parseInt($('#' + id).val());
+        let price = parseInt($('#price' + id.slice(-1)).text().replace(' MMK', ''));
+        let amount = qty * price;
+        $('#amount' + id.slice(-1)).text(amount + ' MMK');
+        calculateTotal();
     }
 
-    function updateTotal() {
+    function calculateTotal() {
         let total = 0;
-        $('[id^="amount-"]').each(function() {
+        $('td[id^="amount"]').each(function() {
             total += parseInt($(this).text().replace(' MMK', ''));
         });
-        $('#total-amount').text(total + ' MMK');
+        $('#total').text(total + ' MMK');
     }
 
-    $('.qty-btn').on('click', function() {
-        const id = $(this).data('id');
-        const action = $(this).data('action');
-        let quantity = parseInt($(`#qty-${id}`).val());
-        
-        if (action === 'increment') {
-            quantity++;
-        } else if (action === 'decrement' && quantity > 1) {
-            quantity--;
-        }
-        
-        $(`#qty-${id}`).val(quantity);
-        updateAmount(id);
+    $('button.plus').click(function() {
+        let target = $(this).data('target');
+        let qty = parseInt($('#' + target).val());
+        $('#' + target).val(qty + 1);
+        calculateAmount(target);
     });
 
-    $('.qty-input').on('input', function() {
-        const id = $(this).attr('id').split('-')[1];
-        updateAmount(id);
+    $('button.minus').click(function() {
+        let target = $(this).data('target');
+        let qty = parseInt($('#' + target).val());
+        if (qty > 1) {
+            $('#' + target).val(qty - 1);
+            calculateAmount(target);
+        } else {
+            // Remove the product row when quantity reaches zero
+            $(this).closest('tr').remove();
+            calculateTotal();
+        }
     });
+
+    calculateTotal(); // Initial calculation
 });
-Explanation
+
+
+
     </script>
 </body>
 </html>
