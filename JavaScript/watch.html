@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Clock</title>
+
+<style>
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: white;
+}
+
+.clock {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+#time {
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+ </style>
+</head>
+<body>
+    <div class="clock">
+        <div id="time"></div>
+    </div>
+    <script>
+    function u() {
+    let d = new Date();
+    let t = document.getElementById('time');
+    let ap = document.getElementById('amPm');
+
+    let h = d.getHours();
+    let m = d.getMinutes();
+    let s = d.getSeconds();
+
+    const as = h < 12 ? "AM" : "PM";
+    h = h % 12 || 12;
+
+    t.innerHTML = `${h}:${m}:${s}`;
+    ap.innerHTML = apText;
+}
+
+    setInterval(u, 1);
+
+    let wd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let dy = wd[new Date().getDay()];
+    document.getElementById("days").innerHTML = dy;
+
+
+    </script>
+</body>
+</html>
