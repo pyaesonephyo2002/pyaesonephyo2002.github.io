@@ -17,48 +17,44 @@
     color: white;
 }
 
-.clock {
+#clock {
     background-color: #444;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
-}
-
-#time {
     font-size: 48px;
     letter-spacing: 2px;
 }
 
+
  </style>
 </head>
 <body>
-    <div class="clock">
-        <div id="time"></div>
-    </div>
+    <div id="clock"></div>
+
     <script>
-    function u() {
-    let d = new Date();
-    let t = document.getElementById('time');
-    let ap = document.getElementById('amPm');
+    function updateTime() {
+    const now = new Date();
+    let hours = now.getHours();
+    const minutes = now.getMinutes();
+    const seconds = now.getSeconds();
 
-    let h = d.getHours();
-    let m = d.getMinutes();
-    let s = d.getSeconds();
+    
+    const ampm = hours >= 12 ? 'PM' : 'AM';
 
-    const as = h < 12 ? "AM" : "PM";
-    h = h % 12 || 12;
+    hours = hours % 12;
+    hours = hours ? hours : 12; 
 
-    t.innerHTML = `${h}:${m}:${s}`;
-    ap.innerHTML = apText;
+    const strMinutes = minutes < 10 ? '0' + minutes : minutes;
+    const strSeconds = seconds < 10 ? '0' + seconds : seconds;
+
+    
+    const timeString = `${hours}:${strMinutes}:${strSeconds} ${ampm}`;
+    document.getElementById('clock').innerText = timeString;
 }
 
-    setInterval(u, 1);
-
-    let wd = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    let dy = wd[new Date().getDay()];
-    document.getElementById("days").innerHTML = dy;
-
+setInterval(updateTime, 1000);
 
     </script>
 </body>
