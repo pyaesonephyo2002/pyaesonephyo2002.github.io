@@ -88,84 +88,16 @@ button.order-btn:hover {
                     <th>Qty</th>
                     <th>Amount</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Laptop 1</td>
-                    <td id="price1">2300000 MMK</td>
-                    <td>
-                        <button class="minus" data-target="qty1">-</button>
-                        <input type="text" id="qty1" value="3">
-                        <button class="plus" data-target="qty1">+</button>
-                    </td>
-                    <td id="amount1">6900000 MMK</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Laptop 2</td>
-                    <td id="price2">2000000 MMK</td>
-                    <td>
-                        <button class="minus" data-target="qty2">-</button>
-                        <input type="text" id="qty2" value="3">
-                        <button class="plus" data-target="qty2">+</button>
-                    </td>
-                    <td id="amount2">6000000 MMK</td>
-                </tr>
+            </thead>  
+            <tbody id="tbody">
             </tbody>
-            <tfoot>
-                <tr>
-                    <td colspan="4">Total</td>
-                    <td id="total">12900000 MMK</td>
-                </tr>
-            </tfoot>
-        </table>
-        <button class="order-btn">Order Now</button>
+            
+            </table>
+        
     </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script>
-
-$(document).ready(function() {
-    function calculateAmount(id) {
-        let qty = parseInt($('#' + id).val());
-        let price = parseInt($('#price' + id.slice(-1)).text().replace(' MMK', ''));
-        let amount = qty * price;
-        $('#amount' + id.slice(-1)).text(amount + ' MMK');
-        calculateTotal();
-    }
-
-    function calculateTotal() {
-        let total = 0;
-        $('td[id^="amount"]').each(function() {
-            total += parseInt($(this).text().replace(' MMK', ''));
-        });
-        $('#total').text(total + ' MMK');
-    }
-
-    $('button.plus').click(function() {
-        let target = $(this).data('target');
-        let qty = parseInt($('#' + target).val());
-        $('#' + target).val(qty + 1);
-        calculateAmount(target);
-    });
-
-    $('button.minus').click(function() {
-        let target = $(this).data('target');
-        let qty = parseInt($('#' + target).val());
-        if (qty > 1) {
-            $('#' + target).val(qty - 1);
-            calculateAmount(target);
-        } else {
-            // Remove the product row when quantity reaches zero
-            $(this).closest('tr').remove();
-            calculateTotal();
-        }
-    });
-
-    calculateTotal(); // Initial calculation
-});
-
+    <script src="script.js"></script>
 
 
     </script>
