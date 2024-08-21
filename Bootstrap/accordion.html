@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Example</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="text-center text-danger my-5">Accordion</h1>
+
+    <div class="accordion m-5" id="accordionParent">
+        <div class="accordion-item">
+            <h2 class="accordion-header" data-bs-target="#questionOne" data-bs-toggle="collapse">
+                <button class="accordion-button">Question 1?</button>
+            </h2>
+            <div id="questionOne" class="accordion-collapse collapse show" data-bs-parent="#accordionParent">
+                <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Similique mollitia ipsa est, et 
+                        dolorum praesentium voluptatum placeat amet vel velit distinctio. Facilis consequatur 
+                        voluptatem autem iusto! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Impedit, 
+                        soluta ipsum, alias non est expedita sunt ratione, illum eligendi sint aliquam dolorum? 
+                        Debitis mollitia eaque, architecto minus suscipit ipsa. Ipsa?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+            <h2 class="accordion-header" data-bs-target="#questionTwo" data-bs-toggle="collapse">
+                <button class="accordion-button">Question 2?</button>
+            </h2>
+            <div id="questionTwo" class="accordion-collapse collapse" data-bs-parent="#accordionParent">
+                <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Similique mollitia ipsa est, et 
+                        dolorum praesentium voluptatum placeat amet vel velit distinctio. Facilis consequatur 
+                        voluptatem autem iusto! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Impedit, 
+                        soluta ipsum, alias non est expedita sunt ratione, illum eligendi sint aliquam dolorum? 
+                        Debitis mollitia eaque, architecto minus suscipit ipsa. Ipsa?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" data-bs-target="#questionThree" data-bs-toggle="collapse">
+                <button class="accordion-button">Question 3?</button>
+            </h2>
+            <div id="questionThree" class="accordion-collapse collapse" data-bs-parent="#accordionParent">
+                <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Similique mollitia ipsa est, et 
+                        dolorum praesentium voluptatum placeat amet vel velit distinctio. Facilis consequatur 
+                        voluptatem autem iusto! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Impedit, 
+                        soluta ipsum, alias non est expedita sunt ratione, illum eligendi sint aliquam dolorum? 
+                        Debitis mollitia eaque, architecto minus suscipit ipsa. Ipsa?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
