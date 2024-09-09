@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Restaurant - Product Detail</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    
+</head>
+<body>
+   <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white mt-2 sticky-top">
+    <div class="container-fluid">
+        <!-- Center the brand logo -->
+        <a class="navbar-brand text-center ms-lg-5" href="index.html">Yummy Corner<span class="text-danger">.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Move navbar links to the right -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-lg-3" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Chefs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="#">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="container py-5">
+        <h1 class="display-4 fw-bold text-center mb-5">Order Summary</h1>
+        <div class="row justify-content-center">
+           
+
+            <div class="col-md-4 d-flex justify-content-center">
+                <div class="card rounded-4 shadow-sm product-card">
+                    <img src="./img/ribeye.jpg" class="card-img-top img-fluid rounded-top" alt="Product Image">
+                    <div class="card-body text-center">
+                        <h5 class="card-title" id="productName3">Ribeye Steak</h5>
+                        <p class="card-text" id="productPrice3">$35</p>
+                        <form action="checkout.html" method="get">
+                            <div class="mb-3">
+                                <label for="quantity2" class="form-label">Quantity</label>
+                                <input type="number" id="quantity2" name="quantity" class="form-control" min="1" value="1">
+                            </div>
+                            <input type="hidden" name="productName" value="Ribeye Steak">
+                            <input type="hidden" name="price" value="35">
+                            <button type="submit" class="btn btn-primary rounded-pill px-4 py-2">Proceed to Checkout</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+    </div>
+
+
+             
+ <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                <p>Phone: +1 5589 55488 55<br>Email: info@example.com</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-clock"></i> Opening Hours</h5>
+                <p>Mon-Sat: 11AM - 11PM<br>Sunday: Closed</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menulist1.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Restaurant</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <!-- Center the brand logo -->
+            <a class="navbar-brand text-center ms-lg-5" href="index.html">Yummy Corner<span class="text-danger">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Move navbar links to the right -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active me-lg-3" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="menulist1.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="chef.html">Chefs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="./img/gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Typewriter effect -->
+    <div class="typewriter mt-4 text-center">
+        <h1>Happy Bites happy vibes!</h1>
+    </div>
+
+    <!-- Main Section -->
+    <!-- Elements to animate on scroll -->
+    <div class="container mt-5 scroll-animation">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4 fw-bold">Enjoy Your Healthy <br> Delicious Food</h1>
+                <p class="lead">At our restaurant, we believe that great food can be both delicious and healthy. We carefully select the freshest ingredients to create meals that not only taste amazing but also nourish your body. Whether you're dining in or taking away, you can indulge in our dishes with the confidence that you're making a wholesome choice.</p>
+                <div class="mt-4 mb-5">
+                    <a href="#" class="btn btn-danger btn-lg rounded-pill me-2" data-bs-toggle="modal" data-bs-target="#reservationModal">Book a Table</a>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4text-center">
+                <img src="./img/banner.jpg" class="img-fluid rounded scroll-animation" alt="Delicious Food">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Book here!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Reservation Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="time" class="form-label">Reservation Time</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Book Now</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold text-center mb-5">Delicious Food Menu</h1>
+            <div class="row g-4 ">
+                <!-- Card 1 -->
+                <!-- Card 1 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/photo4.jpg"  alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Lorem Ipsum</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/photo3.jpg" alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Curabitur Commodo</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/pizzza.jpg" alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Proin Tortor</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/salad.jpeg" alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Aliquam Erat</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/chicken.jpeg" alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Aliquam Erat</h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="card menu-card">
+                        <img src="./img/steak.jpg" alt="Food Image">
+                        <div class="menu-card-body">
+                            <h5 class="menu-card-title">Aliquam Erat</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="container my-5">
+            <div class="row">
+                <!-- Image Section -->
+                <div class="col-md-6 image-section">
+                    <img src="./img/dinein.jpg" alt="Pizza Restaurant">
+                </div>
+                <!-- Text Section -->
+                <div class="col-md-6 text-section mb-auto ">
+                    <div>
+                        <h1>Dine In. Takeaway. Delivery</h1>
+                        <p>Whether you want to enjoy your meal in our cozy restaurant, grab a quick bite on the go, or have your favorite dishes delivered straight to your door, we’ve got you covered. Our flexible dining options are designed to fit your busy lifestyle, ensuring you can savor our delicious food whenever and wherever you like. From the comfort of your home to a quick lunch break, our meals are prepared with the same care and quality. No matter how you choose to dine with us, we promise a satisfying and delightful experience every time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-user-tie"></i> <!-- Font Awesome icon -->
+                        </div>
+                        <h5 class="feature-card-title">Qualify Chefs</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-utensils"></i> <!-- Font Awesome icon -->
+                        </div>
+                        <h5 class="feature-card-title">Quality Food</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome icon -->
+                        </div>
+                        <h5 class="feature-card-title">Online Order</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card feature-card">
+                        <div class="feature-card-icon">
+                            <i class="fas fa-headset"></i> <!-- Font Awesome icon -->
+                        </div>
+                        <h5 class="feature-card-title">24/7 Service</h5>
+                        <p>Diam elitr kasd sed at elitr sed ipsum justo dolor sed clita amet diam</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container my-5">
+            <h1 class="text-center">Popular Menu</h1>
+
+            <!-- Food Items Section -->
+            <div class="row justify-content-center mt-5 ">
+                
+                <!-- Food Item 1 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <span class="price-tag">$20</span>
+                        <img src="./img/grilledsalmon.jpg" alt="Grilled Salmon" class="card-img-top">
+                        <div class="card-body text-center">
+                            <div class="food-title">Grilled Salmon</div>
+                            <div class="chef-name">James Colins</div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal1">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Food Item 2 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <span class="price-tag">$18</span>
+                        <img src="./img/pizzza.jpg  " alt="Margherita Pizza" class="card-img-top">
+                        <div class="card-body text-center">
+                            <div class="food-title">Margherita Pizza</div>
+                            <div class="chef-name">Anna Brown</div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal2">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Food Item 3 -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                    <div class="card">
+                        <span class="price-tag">$18</span>
+                        <img src="./img/steak.jpeg" alt="Ribeye Steak" class="card-img-top">
+                        <div class="card-body text-center">
+                            <div class="food-title">Ribeye Steak</div>
+                            <div class="chef-name">Mark Spencer</div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                                <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal3">View</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Food Item 1 -->
+            <div class="modal fade" id="foodModal1" tabindex="-1" aria-labelledby="foodModalLabel1" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="foodModalLabel1">Grilled Salmon by James Colins</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./img/salmon.jpg" alt="Grilled Salmon" class="img-fluid mb-3">
+                            <p>Fresh salmon fillet, olive oil, garlic, lemon, herbs, sea salt.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='grilledsalmon.html'">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Food Item 2 -->
+            <div class="modal fade" id="foodModal2" tabindex="-1" aria-labelledby="foodModalLabel2" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="foodModalLabel2">Margherita Pizza by Anna Brown</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./img/pizzza.jpg" alt="Margherita Pizza" class="img-fluid mb-3">
+                            <p>Fresh tomatoes, mozzarella cheese, basil, olive oil, pizza dough.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='pizza.html'">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Modal for Food Item 3 -->
+            <div class="modal fade" id="foodModal3" tabindex="-1" aria-labelledby="foodModalLabel3" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="foodModalLabel3">Ribeye Steak by Mark Spencer</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="./img/steak.jpg" alt="Ribeye Steak" class="img-fluid mb-3">
+                            <p>Juicy grilled steak served with a side of garlic mashed potatoes and sautéed vegetables.</p>
+                            <p>Prime ribeye steak, garlic butter, rosemary, black pepper, sea salt.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='ribeye.html'">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+        
+      
+
+
+        
+    
+
+        <div class="subscription-section">
+            <div class="text-center subscription-form">
+                <h2>Subscribe to our Newsletter</h2>
+                <form class="d-flex flex-column flex-md-row gap-2 mt-4">
+                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-success">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+
+
+
+
+
+        
+   <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                <p>Phone: +1 5589 55488 55<br>Email: info@example.com</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-clock"></i> Opening Hours</h5>
+                <p>Mon-Sat: 11AM - 11PM<br>Sunday: Closed</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    
+
+
+
+
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        // JavaScript to add the 'show' class when elements scroll into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+        
+            const elementInView = (el, offset = 100) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
+                );
+            };
+        
+            const displayScrollElement = (element) => {
+                element.classList.add('show');
+            };
+        
+            const hideScrollElement = (element) => {
+                element.classList.remove('show');
+            };
+        
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 100)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+        
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+        </script>
+        
+</body>
+</html>

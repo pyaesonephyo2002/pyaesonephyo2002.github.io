@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yummy Restaurant</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container-fluid">
+        <!-- Center the brand logo -->
+        <a class="navbar-brand text-center ms-lg-5" href="index.html">Yummy Corner<span class="text-danger">.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Move navbar links to the right -->
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active me-lg-3" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="menulist1.html">Menu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="chef.html">Chefs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="./img/gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="login.html">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link me-lg-3" href="register.html">Register</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    
+    
+
+    
+     <!-- Main Container -->
+    <div class="container my- mb-5">
+
+    <!-- Food Items Section -->
+    <div class="row justify-content-center mt-5 ">
+        <!-- Food Item 1 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$20</span>
+                <img src="./img/salmon.jpg" class="img-fluid" alt="Grilled Salmon">
+                <div class="card-body text-center">
+                    <div class="food-title">Grilled Salmon</div>
+                    <div class="chef-name">James Colins</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal1">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Item 2 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$18</span>
+                <img src="./img/pizzza.jpg" alt="Margherita Pizza" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="food-title">Margherita Pizza</div>
+                    <div class="chef-name">Anna Brown</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal2">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Item 3 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$18</span>
+                <img src="./img/ribeye.jpg" alt="Ribeye Steak" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="food-title">Ribeye Steak</div>
+                    <div class="chef-name">Mark Spencer</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal3">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 1 -->
+    <div class="modal mt-5 fade" id="foodModal1" tabindex="-1" aria-labelledby="foodModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel1">Grilled Salmon by James Colins</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/salmon.jpg" alt="Grilled Salmon" class="img-fluid mb-3">
+                    <p>Fresh salmon fillet, olive oil, garlic, lemon, herbs, sea salt.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='grilledsalmon.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 2 -->
+    <div class="modal mt-5 fade" id="foodModal2" tabindex="-1" aria-labelledby="foodModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel2">Margherita Pizza by Anna Brown</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/piza.jpg" alt="Margherita Pizza" class="img-fluid mb-3">
+                    <p>Fresh tomatoes, mozzarella cheese, basil, olive oil, pizza dough.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='pizza.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 3 -->
+    <!-- Modal -->
+<div class="modal mt-5 fade" id="foodModal1" tabindex="-1" aria-labelledby="foodModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="foodModalLabel1">Grilled Steak</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <div class="row">
+              <!-- Image Section -->
+              <div class="col-md-6">
+                <img src="./img/steak.jpg" class="img-fluid" alt="Grilled Steak">
+              </div>
+              <!-- Text Section -->
+              <div class="col-md-6">
+                <p>Juicy grilled steak served with a side of garlic mashed potatoes and sautéed vegetables.</p>
+                <p>Prime ribeye steak, garlic butter, rosemary, black pepper, sea salt.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger">Order Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+
+<div class="container my-5">
+    <!-- Header Section -->
+    <div class="text-center mb-4">
+    </div>
+
+    <!-- Food Items Section -->
+    <div class="row justify-content-center">
+        <!-- Food Item 4 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$12</span>
+                <img src="./img/salad.jpeg" alt="Salad" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="food-title">Caesar Salad</div>
+                    <div class="chef-name">James Colins</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal4">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Item 5 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$20</span>
+                <img src="./img/spaghetti.jpeg" alt="Spaghetti" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="food-title">Spaghetti
+                    </div>
+                    <div class="chef-name">Anna Brown</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal5">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Food Item 6 -->
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div class="card">
+                <span class="price-tag">$22</span>
+                <img src="./img/chicken.webp" alt="Chicken" class="card-img-top">
+                <div class="card-body text-center">
+                    <div class="food-title">Chicken Masala</div>
+                    <div class="chef-name">Mark Spencer</div>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                        <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal6">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal for Food Item 1 -->
+    <div class="modal mt-5 fade" id="foodModal1" tabindex="-1" aria-labelledby="foodModalLabel1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel1">Grilled Salmon by James Colins</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="salmon.jpg" alt="Grilled Salmon" class="img-fluid mb-3">
+                    <p>Fresh salmon fillet, olive oil, garlic, lemon, herbs, sea salt.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='grilledsalmon.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 2 -->
+    <div class="modal mt-5 fade" id="foodModal2" tabindex="-1" aria-labelledby="foodModalLabel2" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel2">Margherita Pizza by Anna Brown</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="pizzza.jpg" alt="Margherita Pizza" class="img-fluid mb-3">
+                    <p>Fresh tomatoes, mozzarella cheese, basil, olive oil, pizza dough.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='productdetail.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 3 -->
+    <div class="modal mt-5 fade" id="foodModal3" tabindex="-1" aria-labelledby="foodModalLabel3" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel3">Ribeye Steak by Mark Spencer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="steak.jpeg" alt="Ribeye Steak" class="img-fluid mb-3">
+                    <p>Juicy grilled steak served with a side of garlic mashed potatoes and sautéed vegetables.</p>
+                    <p>Prime ribeye steak, garlic butter, rosemary, black pepper, sea salt.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='chickenmasala.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal for Food Item 4 -->
+     <div class="modal mt-5 fade" id="foodModal4" tabindex="-1" aria-labelledby="foodModalLabel4" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel4">Caesar Salad by Mark Spencer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/saalad.jpg" alt="Ribeye Steak" class="img-fluid mb-3">
+                    <p>Crisp romaine lettuce tossed with creamy Caesar dressing, topped with crunchy croutons and shaved parmesan.</p>
+                    <p>omaine lettuce, croutons, parmesan cheese, Caesar dressing, anchovies (optional).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='salad.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Food Item 5 -->
+    <div class="modal  mt-5 fade" id="foodModal5" tabindex="-1" aria-labelledby="foodModalLabel5" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel5">Spaghetti Carbonara by Mark Spencer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/spaghetti.jpg" alt="Spaghetti" class="img-fluid mb-3">
+                    <p>Crisp romaine lettuce tossed with creamy Caesar dressing, topped with crunchy croutons and shaved parmesan.</p>
+                    <p>omaine lettuce, croutons, parmesan cheese, Caesar dressing, anchovies (optional).</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='spaghetti.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal for Food Item 6 -->
+    <div class="modal  mt-5 fade" id="foodModal6" tabindex="-1" aria-labelledby="foodModalLabel6" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="foodModalLabel6">Chicken Tikka Masala by Mark Spencer</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./img/chicken.jpeg" alt="Spaghetti" class="img-fluid mb-3">
+                    <p>A flavorful dish of marinated chicken cooked in a creamy, spiced tomato sauce, served with basmati rice or naan.</p>
+                    <p>Chicken breast, yogurt, spices, tomatoes, cream, cilantro</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='chickenmasala.html'">Order Now</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+     <!-- Pagination -->
+     <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item">
+                <a class="page-link" href="menulist1.html" tabindex="-1" aria-disabled="true">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="menulist1.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="menutlist2.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="menulist3.html">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="menulist3.html">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+    
+
+
+
+
+
+
+  <!-- Footer -->
+<footer class="mt-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                <p>Phone: +1 5589 55488 55<br>Email: info@example.com</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-clock"></i> Opening Hours</h5>
+                <p>Mon-Sat: 11AM - 11PM<br>Sunday: Closed</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menulist1.html">Menu</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+    <script> 
+        // JavaScript to add the 'show' class when elements scroll into view
+        document.addEventListener('DOMContentLoaded', function () {
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+    
+            const elementInView = (el, offset = 100) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= ((window.innerHeight || document.documentElement.clientHeight) - offset)
+                );
+            };
+    
+            const displayScrollElement = (element) => {
+                element.classList.add('show');
+            };
+    
+            const hideScrollElement = (element) => {
+                element.classList.remove('show');
+            };
+    
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 100)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+    
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+        });
+    </script>
+    
+        
+</body>
+</html>

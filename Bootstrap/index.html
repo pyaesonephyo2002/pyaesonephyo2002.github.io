@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeinLearn</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    <style>
+        @font-face {
+    font-family: "Roboto";
+    src: url('../Roboto/Roboto-Regular.ttf');
+}
+
+*{
+    font-family: "Roboto";
+}
+
+/* navbar start */
+.active_page{
+    color: red !important;
+}
+.nav_hover:hover{
+    color: red !important;
+}
+
+/* start carousel */
+
+.carousel_text{
+    top: 35%;
+    left: 10%;
+}
+
+/* category */
+
+.card_hover:hover{
+    /* background-color: rgb(243, 75, 75) !important; */
+    /* color: white; */
+    box-shadow: -2px 3px 10px 0px rgba(224,87,87,1);
+}
+    </style>
+</head>
+<body>
+    
+    <!--     
+        Eduction online website 
+
+        -category
+        -course
+        -teacher
+        -student register
+        -login
+        -about
+        -contact
+        -home
+        -enrollment list
+        -whistlist    
+    -->
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid mx-md-4 mx-lg-5">
+          <a class="navbar-brand ms-lg-5" href="index.html"><img src="./bootstrap/images/logo.jpg" alt="" width="100px" height="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4 active active_page" aria-current="page" href="index.html">Home</a>
+              </li>              
+              <li class="nav-item dropdown">
+                <a class="nav-link nav_hover me-4 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                  Category
+                </a>
+                <ul class="dropdown-menu">  
+                  <li><a class="dropdown-item" href="#">PHP</a></li>
+                  <li><a class="dropdown-item" href="#">React</a></li>
+                  <li><a class="dropdown-item" href="#">Java</a></li>
+                  <li><a class="dropdown-item" href="#">Python</a></li>
+                  <li><a class="dropdown-item" href="#">Odoo</a></li>
+                  <li><a class="dropdown-item" href="#">Go</a></li>
+                  <li><a class="dropdown-item" href="#">Kotlin</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4" href="course.html">Course</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4" href="register.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_hover me-4" href="login.html">Login</a>
+              </li>
+            </ul>
+            <form class="justify-content-end me-5">
+                <a class="btn btn-danger btn-lg" type="button" href="course.html">Get Started</a>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!-- end navbar -->
+
+
+    <!-- start bunner -->
+    <div id="carouselExample" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./bootstrap/images/carousel4.jpg" class="d-block w-100" alt="...">
+            <div class="carousel_text position-absolute text-white">
+                <h3>Explore variety of quality courses and gain <br> new skills</h3>
+                <p class="mt-lg-3 d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Recusandae laborum rerum.</p>
+                <div class=" mt-md-4 mt-lg-5 d-none d-md-block">
+                    <button class="btn btn-danger btn-lg">Sign Up</button>
+                    <button class="btn btn-dark btn-lg ms-3">Find Course</button>
+                </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./bootstrap/images/carousel2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel_text position-absolute text-white">
+                <h3>Courses Upgrade your Learning <br> Skills and Upgrade Life </h3>
+                <p class="mt-lg-3 d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Recusandae laborum rerum.</p>
+                <div class="mt-lg-5 d-none d-md-block">
+                    <button class="btn btn-danger btn-lg">Sign Up</button>
+                    <button class="btn btn-dark btn-lg ms-3">Find Course</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- end bunner -->
+
+    <!-- start category -->
+
+    <div class="container my-5 py-5">
+        <h3 class="text-uppercase text-center fw-bold"><i class="fa-solid fa-square text-danger me-2 fa-xs"></i>OUR COURSE CAREGORY <i class="fa-solid fa-square text-danger ms-2 fa-xs"></i></h3>
+        <p class="text-center h5">Creative categories for students.
+        </p>
+        <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 justify-content-center my-4">
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryphp-removebg-preview.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>PHP</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryreact-removebg-preview.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>React</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categorygo.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Go</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryjava.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Java</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categorykotlin.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Kotlin</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categorypython.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Python</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryodoo.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Odoo</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryjava.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>Java</h5>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card text-center border-danger p-1 card_hover">
+              <a href=""><img src="./bootstrap/images/categoryphp-removebg-preview.jpg" alt="" class="card-img-top w-25"></a>
+              <h5>PHP</h5>
+            </div>
+          </div>
+        </div>      
+      </div>
+  
+      <!-- end category -->
+  
+      <!-- start course -->
+       <div class="container my-5">
+          <h3 class="text-uppercase text-center fw-bold"><i class="fa-solid fa-square text-danger me-2 fa-xs"></i>Popular Course <i class="fa-solid fa-square text-danger ms-2 fa-xs"></i></h3>
+          <p class="text-center h5">Enhance your skills with best Online courses.</p>
+          <div class="row my-5">
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="card">
+                <img src="./bootstrap/images/categoryphp-removebg-preview.jpg" alt="" class="card-img-top ">
+                <div class="card-body">
+                  <a href="" class="card-title h3 text-decoration-none ">Start Web Development With PHP</a>
+                </div>
+                <p>
+                  <span class="ms-3">12 Lectures</span>
+                  <span class="float-end me-3">4 Months</span>
+                </p>
+              </div>
+            </div>
+          </div>
+       </div>
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="fontawesome/js/all.min.js"></script>
+  </body>
+  </html>
