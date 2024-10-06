@@ -517,4 +517,13 @@ footer {
     transform: translateY(-10px);
 }
 
-
+.dish {  
+    opacity: 0; /* Start hidden */  
+    transform: translateY(20px); /* Start slightly below */  
+    transition: opacity 1s ease-out, transform 3s ease-out; /* Smooth transition */  
+    transition-delay: 2ms; /* No delay initially */  
+}  
+.dish.visible {  
+    opacity: 1; /* Fully visible */  
+    transform: translateY(0); /* Move to original position */  
+}  
