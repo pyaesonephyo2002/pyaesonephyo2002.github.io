@@ -1,0 +1,118 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="./css/style.css">  
+</head>  
+<body>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+        <div class="container-fluid">
+            <!-- Center the brand logo -->
+            <a class="navbar-brand text-center ms-lg-5" href="index.html">Yummy Corner<span class="text-danger">.</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Move navbar links to the right -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active me-lg-3" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="menulist1.html">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="chef.html">Chefs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="register.html">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <div class="container">  
+        <h2 class="text-center">Book here!</h2>  
+        <div class="row justify-content-center ">  <!-- Added Bootstrap row and justify-content for centering -->  
+            <div class="col-md-4">  <!-- Bootstrap column: adjust width here -->  
+                <form class="p-4 border border-secondary rounded shadow">  
+                    <div class="mb-3">  
+                        <label for="name" class="form-label">Name</label>  
+                        <input type="text" class="form-control" id="name" required>  
+                    </div>  
+                    <div class="mb-3">  
+                        <label for="email" class="form-label">Email</label>  
+                        <input type="email" class="form-control" id="email" required>  
+                    </div>  
+                    <div class="mb-3">  
+                        <label for="phone" class="form-label">Phone</label>  
+                        <input type="tel" class="form-control" id="phone" required>  
+                    </div>  
+                    <div class="mb-3">  
+                        <label for="date" class="form-label">Reservation Date</label>  
+                        <input type="date" class="form-control" id="date" required>  
+                    </div>  
+                    <div class="mb-3">  
+                        <label for="time" class="form-label">Reservation Time</label>  
+                        <input type="time" class="form-control" id="time" required>  
+                    </div>  
+                    <button type="submit" class="btn btn-primary">Book Now</button>  
+                </form>  
+            </div>  <!-- End of column -->  
+        </div>  <!-- End of row -->  
+    </div>  <br>
+
+
+         
+   <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                <p>A108 Adam Street<br>New York, NY 535022</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                <p>Phone: +1 5589 55488 55<br>Email: info@example.com</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5><i class="fas fa-clock"></i> Opening Hours</h5>
+                <p>Mon-Sat: 11AM - 11PM<br>Sunday: Closed</p>
+            </div>
+            <div class="col-md-3 footer-section">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>  
+
+
+</html>
