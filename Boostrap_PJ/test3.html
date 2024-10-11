@@ -73,38 +73,33 @@
         </div>
     </div>
 
-    <br><br>
+    
 <!-- Our Specials Section -->
 <div class="container my-5">
     <div class="row align-items-center">
         <!-- Left Column: Title and Paragraph -->
         <div class="col-lg-4 col-md-6 mb-4">
             <h2 class="text-left">Our Specials</h2>
-            <p class="text-justify">
-                At our restaurant, we pride ourselves on offering a selection of delicious and unique dishes that are sure to delight your taste buds. 
-                Complementing this is our crispy samosa, filled with a savory mix of spiced potatoes and peas, perfect for a light snack or appetizer.
-                Each of these specials is crafted with the finest ingredients to provide a culinary experience you won't forget!
-
+            <p class="text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod convallis elit. Nullam et neque ut magna
+                ullamcorper malesuada non at libero. Suspendisse eget augue lacus. Aenean scelerisque vestibulum nulla, nec laoreet eros dapibus at.
             </p>
-            <p class="text-justify">
-                Each of these specials is crafted with the finest ingredients to provide a culinary experience you won't forget!
+            <p class="text-muted">
+                Aenean eget felis a nisi vehicula fringilla. Donec eu efficitur arcu, quis accumsan elit. Curabitur malesuada euismod justo non fermentum.
             </p>
-            
-                      
         </div>
-        
+
         <!-- Right Column: Special Items -->
         <div class="col-lg-8 col-md-6">
-            
             <div class="row text-center">
                 <!-- Special Item 1 -->
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0">
                         <div class="rounded-circle mx-auto" style="overflow:hidden; width:200px; height:200px;">
-                            <img src="img/foodg3.jpg" class="img-fluid" alt="">
+                            <img src="img/foodg3.jpg" class="img-fluid" alt="Cake">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Roasted Chicken</h5>
+                            <h5 class="card-title">Cake</h5>
                             <p class="text-danger">$10.00</p>
                         </div>
                     </div>
@@ -114,7 +109,7 @@
                 <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card border-0">
                         <div class="rounded-circle mx-auto" style="overflow:hidden; width:200px; height:200px;">
-                            <img src="img/chiccken.jpg" class="img-fluid" alt="Samosa">
+                            <img src="img/foodg2.jpg" class="img-fluid" alt="Samosa">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">Samosa</h5>
@@ -130,8 +125,8 @@
                             <img src="img/foodg7.jpg" class="img-fluid" alt="Dahi Wada">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Fresh Salmon</h5>
-                            <p class="text-danger">$19.00</p>
+                            <h5 class="card-title">Dahi Wada</h5>
+                            <p class="text-danger">$25.00</p>
                         </div>
                     </div>
                 </div>
@@ -140,6 +135,130 @@
     </div>
 </div>
 
+    
+    <div class="container px-4 my-5">
+        <h1 class="text-center">Popular Menu</h1>
+    
+        <!-- Food Items Section -->
+        <div class="row justify-content-center mt-5 g-3">
+            
+            <!-- Food Item 1 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 offset-lg-1">
+                <div class="card">
+                    <span class="price-tag">$20</span>
+                    <img src="./img/grilledsalmon.jpg" alt="Grilled Salmon" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="food-title">Grilled Salmon</div>
+                        <div class="chef-name">James Colins</div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal1">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Food Item 2 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+                <div class="card">
+                    <span class="price-tag">$18</span>
+                    <img src="./img/pizzza.jpg" alt="Margherita Pizza" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="food-title">Margherita Pizza</div>
+                        <div class="chef-name">Anna Brown</div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal2">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Food Item 3 -->
+            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-4 offset-lg-1">
+                <div class="card">
+                    <span class="price-tag">$18</span>
+                    <img src="./img/steak.jpeg" alt="Ribeye Steak" class="card-img-top">
+                    <div class="card-body text-center">
+                        <div class="food-title">Ribeye Steak</div>
+                        <div class="chef-name">Mark Spencer</div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-3">
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#foodModal3">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+        <!-- Modal for Food Item 1 -->
+        <div class="modal fade" id="foodModal1" tabindex="-1" aria-labelledby="foodModalLabel1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="foodModalLabel1">Grilled Salmon by James Colins</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/salmon.jpg" alt="Grilled Salmon" class="img-fluid mb-3">
+                        <p>Fresh salmon fillet, olive oil, garlic, lemon, herbs, sea salt.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='grilledsalmon.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal for Food Item 2 -->
+        <div class="modal fade" id="foodModal2" tabindex="-1" aria-labelledby="foodModalLabel2" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="foodModalLabel2">Margherita Pizza by Anna Brown</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/pizzza.jpg" alt="Margherita Pizza" class="img-fluid mb-3">
+                        <p>Fresh tomatoes, mozzarella cheese, basil, olive oil, pizza dough.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='pizza.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Modal for Food Item 3 -->
+        <div class="modal fade" id="foodModal3" tabindex="-1" aria-labelledby="foodModalLabel3" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="foodModalLabel3">Ribeye Steak by Mark Spencer</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="./img/steak.jpg" alt="Ribeye Steak" class="img-fluid mb-3">
+                        <p>Juicy grilled steak served with a side of garlic mashed potatoes and sautéed vegetables.</p>
+                        <p>Prime ribeye steak, garlic butter, rosemary, black pepper, sea salt.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='ribeye.html'">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+  
+
+  
     <!-- delicious food menu -->
   
 
@@ -147,40 +266,70 @@
         <h2 class="text-center mb-4">Delicious Food Menu</h2>  
         <div id="dishContainer" class="list-group">  
             <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish1" aria-expanded="false" aria-controls="dish1" style="cursor: pointer;">  
-                <img src="img/freshsalmon.jpg" class="img-fluid float-start me-3" alt="Dish 1">  
-                <h5 class="mb-1">Fresh Salmon</h5>  
-                <p class="mb-1">A perfectly grilled, wild-caught fresh salmon fillet served with a side of sautéed spinach and roasted baby potatoe</p>  
-                <!-- <div id="dish1" class="collapse">  
+                <img src="img/photo4.jpg" class="img-fluid float-start me-3" alt="Dish 1">  
+                <h5 class="mb-1">Dish 1</h5>  
+                <p class="mb-1">A delicious dish made with fresh ingredients, topped with herbs.</p>  
+                <div id="dish1" class="collapse">  
                     <div class="mt-2">  
                         Fresh basil, parsley, and oregano make it special!  
                     </div>  
-                </div>   -->
-                <button class="btn btn-primary mt-2" onclick="window.location.href='salmon.html'">View</button>
+                </div>  
             </div>  
             <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish2" aria-expanded="false" aria-controls="dish2" style="cursor: pointer;">  
                 <img src="img/photo3.jpg" class="img-fluid float-start me-3" alt="Dish 2">  
                 <h5 class="mb-1">Dish 2</h5>  
                 <p class="mb-1">A scrumptious meal that will tickle your taste buds.</p>  
-                <!-- <div id="dish2" class="collapse">  
+                <div id="dish2" class="collapse">  
                     <div class="mt-2">  
                         Made with organic ingredients and spices!  
                     </div>  
-                </div>   -->
-                <button class="btn btn-primary mt-2">View</button>  
+                </div>  
             </div>  
             <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish3" aria-expanded="false" aria-controls="dish3" style="cursor: pointer;">  
                 <img src="img/chicken150.jpg" class="img-fluid float-start me-3" alt="Dish 3">  
                 <h5 class="mb-1">Dish 3</h5>  
                 <p class="mb-1">An exquisite dish that combines flavors from around the world.</p>  
-                <!-- <div id="dish3" class="collapse">  
+                <div id="dish3" class="collapse">  
                     <div class="mt-2">  
                         Featuring spices from India, Italy, and Mexico!  
                     </div>  
-                </div>   -->
-                <button class="btn btn-primary mt-2">View</button>  
+                </div>  
             </div>  
         </div>  
-    </div>
+
+        <div id="dishContainer" class="list-group">  
+            <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish1" aria-expanded="false" aria-controls="dish1" style="cursor: pointer;">  
+                <img src="img/photo4.jpg" class="img-fluid float-start me-3" alt="Dish 1">  
+                <h5 class="mb-1">Dish 1</h5>  
+                <p class="mb-1">A delicious dish made with fresh ingredients, topped with herbs.</p>  
+                <div id="dish1" class="collapse">  
+                    <div class="mt-2">  
+                        Fresh basil, parsley, and oregano make it special!  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish2" aria-expanded="false" aria-controls="dish2" style="cursor: pointer;">  
+                <img src="img/photo3.jpg" class="img-fluid float-start me-3" alt="Dish 2">  
+                <h5 class="mb-1">Dish 2</h5>  
+                <p class="mb-1">A scrumptious meal that will tickle your taste buds.</p>  
+                <div id="dish2" class="collapse">  
+                    <div class="mt-2">  
+                        Made with organic ingredients and spices!  
+                    </div>  
+                </div>  
+            </div>  
+            <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish3" aria-expanded="false" aria-controls="dish3" style="cursor: pointer;">  
+                <img src="img/chicken150.jpg" class="img-fluid float-start me-3" alt="Dish 3">  
+                <h5 class="mb-1">Dish 3</h5>  
+                <p class="mb-1">An exquisite dish that combines flavors from around the world.</p>  
+                <div id="dish3" class="collapse">  
+                    <div class="mt-2">  
+                        Featuring spices from India, Italy, and Mexico!  
+                    </div>  
+                </div>  
+            </div>  
+        </div> 
+    </div>  
 
 
         
@@ -363,3 +512,49 @@
         
 </body>
 </html>
+
+
+
+
+
+/* New Card Styling */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Subtle gradient */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Card Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.card img {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Card Body Styling */
+.card-body {
+    text-align: center;
+    background: #ffffff; /* Background color for card body */
+    padding: 20px;
+    transition: background 0.4s ease;
+}
+
+.card:hover .card-body {
+    background: #f8f8f8; /* Change background on hover */
+} */ */
