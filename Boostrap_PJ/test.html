@@ -1,120 +1,302 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
-<body>
-    <div class="container mt-5">  
-        <h2 class="text-center mb-4">Gourmet Food Menu</h2>  
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+            <link rel="stylesheet" href="./css/style.css">
+
+            <style>
+                .menu-item {
+            margin-bottom: 30px; /* Add space between menu items */
+        }
+
+        .menu-item img {
+            height: 200px; /* Adjust image height for uniformity */
+            object-fit: cover; /* Ensure images are cropped appropriately */
+        }   
+            </style>
+        </head>
+        <body>
+
+            <!-- Navbar with Cart Icon -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-center ms-lg-5" href="index.html">Yummy Corner<span class="text-danger">.</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active me-lg-3" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="about.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="menulist1.html">Menu</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="chef.html">Chefs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="gallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="login.html">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link me-lg-3" href="register.html">Register</a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="test7.html">
+                                    <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+                                    <span id="cart-count" class="badge bg-secondary">0</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
         
-        <!-- Nav tabs -->  
-        <ul class="nav nav-tabs justify-content-center mb-3" id="foodTab" role="tablist">  
-            <li class="nav-item" role="presentation">  
-                <a class="nav-link active" id="appetizers-tab" data-bs-toggle="tab" href="#appetizers" role="tab" aria-controls="appetizers" aria-selected="true">Appetizers</a>  
-            </li>  
-            <li class="nav-item" role="presentation">  
-                <a class="nav-link" id="main-course-tab" data-bs-toggle="tab" href="#main-course" role="tab" aria-controls="main-course" aria-selected="false">Main Course</a>  
-            </li>  
-            <li class="nav-item" role="presentation">  
-                <a class="nav-link" id="desserts-tab" data-bs-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Desserts</a>  
-            </li>  
-        </ul>  
-    
-        <!-- Tab content -->  
-        <div class="tab-content" id="foodTabContent">  
-            <div class="tab-pane fade show active" id="appetizers" role="tabpanel" aria-labelledby="appetizers-tab">  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/bruschetta.jpg" class="img-fluid" alt="Bruschetta">  
-                    <h5 class="mt-2">Bruschetta</h5>  
-                    <p>Toasted bread topped with diced tomatoes, basil, and olive oil.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer1-details">Details</button>  
-                    <div id="appetizer1-details" class="collapse mt-2">  
-                        <p>Freshly made with aromatic herbs and served with balsamic reduction.</p>  
-                    </div>  
-                </div>  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/stuffed-mushrooms.jpg" class="img-fluid" alt="Stuffed Mushrooms">  
-                    <h5 class="mt-2">Stuffed Mushrooms</h5>  
-                    <p>Mushrooms filled with a savory blend of cheese and herbs.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer2-details">Details</button>  
-                    <div id="appetizer2-details" class="collapse mt-2">  
-                        <p>Baked to perfection, these stuffed mushrooms are the perfect start to your meal!</p>  
-                    </div>  
-                </div>  
-            </div>  
-    
-            <div class="tab-pane fade" id="main-course" role="tabpanel" aria-labelledby="main-course-tab">  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/grilled-chicken.jpg" class="img-fluid" alt="Grilled Chicken">  
-                    <h5 class="mt-2">Grilled Chicken</h5>  
-                    <p>Marinated chicken grilled to juicy perfection.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#main1-details">Details</button>  
-                    <div id="main1-details" class="collapse mt-2">  
-                        <p>Served with seasonal vegetables and topped with a light sauce.</p>  
-                    </div>  
-                </div>  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/pasta-primavera.jpg" class="img-fluid" alt="Pasta Primavera">  
-                    <h5 class="mt-2">Pasta Primavera</h5>  
-                    <p>A medley of seasonal vegetables tossed with pasta and olive oil.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#main2-details">Details</button>  
-                    <div id="main2-details" class="collapse mt-2">  
-                        <p>Rich in flavors and a favorite among veggie lovers!</p>  
-                    </div>  
-                </div>  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/steak.jpg" class="img-fluid" alt="Grilled Steak">  
-                    <h5 class="mt-2">Grilled Steak</h5>  
-                    <p>Perfectly grilled steak with a rich seasoning blend.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#main3-details">Details</button>  
-                    <div id="main3-details" class="collapse mt-2">  
-                        <p>Served with garlic mashed potatoes and sautéed greens.</p>  
-                    </div>  
-                </div>  
-            </div>  
-    
-            <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/tiramisu.jpg" class="img-fluid" alt="Tiramisu">  
-                    <h5 class="mt-2">Tiramisu</h5>  
-                    <p>A classic Italian dessert made with coffee and mascarpone cheese.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert1-details">Details</button>  
-                    <div id="dessert1-details" class="collapse mt-2">  
-                        <p>Layers of coffee-soaked ladyfingers and creamy mascarpone topped with cocoa powder.</p>  
-                    </div>  
-                </div>  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/chocolate-lava-cake.jpg" class="img-fluid" alt="Chocolate Lava Cake">  
-                    <h5 class="mt-2">Chocolate Lava Cake</h5>  
-                    <p>Warm chocolate cake with a molten center, served with vanilla ice cream.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert2-details">Details</button>  
-                    <div id="dessert2-details" class="collapse mt-2">  
-                        <p>The ultimate indulgence for chocolate lovers!</p>  
-                    </div>  
-                </div>  
-                <div class="dish-item mb-4" style="cursor: pointer;">  
-                    <img src="img/cheesecake.jpg" class="img-fluid" alt="Cheesecake">  
-                    <h5 class="mt-2">Classic Cheesecake</h5>  
-                    <p>A rich and creamy cheesecake on a graham cracker crust.</p>  
-                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert3-details">Details</button>  
-                    <div id="dessert3-details" class="collapse mt-2">  
-                        <p>Served with a fresh berry compote for a delightful finish!</p>  
-                    </div>  
-                </div>  
-            </div>  
-        </div>  
-    </div>  
-    
-    <!-- Bootstrap CSS -->  
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">  
-    
-    <!-- Bootstrap Bundle with Popper.js -->  
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+            <div class="container mt-5">  
+                <h2 class="text-center mb-4">Food Menu</h2>  
+                
+                <!-- Nav tabs -->  
+                <ul class="nav nav-tabs justify-content-center mb-3" id="foodTab" role="tablist">  
+                    <li class="nav-item" role="presentation">  
+                        <a class="nav-link active" id="appetizers-tab" data-bs-toggle="tab" href="#appetizers" role="tab" aria-controls="appetizers" aria-selected="true">Appetizers</a>  
+                    </li>  
+                    <li class="nav-item" role="presentation">  
+                        <a class="nav-link" id="main-course-tab" data-bs-toggle="tab" href="#main-course" role="tab" aria-controls="main-course" aria-selected="false">Main Course</a>  
+                    </li>  
+                    <li class="nav-item" role="presentation">  
+                        <a class="nav-link" id="desserts-tab" data-bs-toggle="tab" href="#desserts" role="tab" aria-controls="desserts" aria-selected="false">Desserts</a>  
+                    </li>  
+                </ul>  
+                
+                <!-- Tab content -->  
+                <div class="tab-content">
+                <!-- Appetizers Tab -->
+        <div class="tab-pane fade show active" id="appetizers" role="tabpanel" aria-labelledby="appetizers-tab">
+            <div class="row">
+                <div class="col-md-6 menu-item">
+                    <img src="img/chicken150.jpg" alt="Bruschetta" class="img-fluid">
+                    <h5>Bruschetta</h5>
+                    <p>Toasted bread topped with diced tomatoes, basil, and olive oil.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="1" data-name="Bruschetta" data-price="8">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer1-details">Details</button>
+                    <div id="appetizer1-details" class="collapse mt-2">
+                        <p>Freshly made with aromatic herbs and served with balsamic reduction.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 menu-item">
+                    <img src="img/salmon250.jpg" alt="Stuffed Mushrooms" class="img-fluid">
+                    <h5>Stuffed Mushrooms</h5>
+                    <p>Mushrooms filled with a savory blend of cheese and herbs.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="2" data-name="Stuffed Mushrooms" data-price="10">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer2-details">Details</button>
+                    <div id="appetizer2-details" class="collapse mt-2">
+                        <p>Baked to perfection, these stuffed mushrooms are the perfect start to your meal!</p>
+                    </div>
+                </div>
+
+                
+                <div class="col-md-6 menu-item">
+                    <img src="img/salmon250.jpg" alt="Stuffed Mushrooms" class="img-fluid">
+                    <h5>Stuffed Mushrooms</h5>
+                    <p>Mushrooms filled with a savory blend of cheese and herbs.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="2" data-name="Stuffed Mushrooms" data-price="10">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer2-details">Details</button>
+                    <div id="appetizer2-details" class="collapse mt-2">
+                        <p>Baked to perfection, these stuffed mushrooms are the perfect start to your meal!</p>
+                    </div>
+                </div>
+
+                <!-- Additional Appetizers -->
+                <div class="col-md-6 menu-item">
+                    <img src="img/bruschetta.jpg" alt="Caprese Salad" class="img-fluid">
+                    <h5>Caprese Salad</h5>
+                    <p>Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="3" data-name="Caprese Salad" data-price="7">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#appetizer3-details">Details</button>
+                    <div id="appetizer3-details" class="collapse mt-2">
+                        <p>A refreshing salad perfect for summer!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+                    <!-- Main Course Tab -->
+        <div class="tab-pane fade" id="main-course" role="tabpanel" aria-labelledby="main-course-tab">
+            <div class="row mt-4">
+                <div class="col-md-6 menu-item">
+                    <img src="img/grilled_chicken.jpg" alt="Grilled Chicken" class="img-fluid">
+                    <h5>Grilled Chicken</h5>
+                    <p>Marinated chicken grilled to juicy perfection.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="4" data-name="Grilled Chicken" data-price="12">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#main1-details">Details</button>
+                    <div id="main1-details" class="collapse mt-2">
+                        <p>Served with seasonal vegetables and topped with a light sauce.</p>
+                    </div>
+                </div>
+                <!-- Additional Main Course -->
+                <div class="col-md-6 menu-item">
+                    <img src="img/steak.jpg" alt="Steak" class="img-fluid">
+                    <h5>Grilled Steak</h5>
+                    <p>Tender steak grilled to your preference.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="5" data-name="Grilled Steak" data-price="20">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#main2-details">Details</button>
+                    <div id="main2-details" class="collapse mt-2">
+                        <p>Served with garlic mashed potatoes and seasonal veggies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                
+                <!-- Desserts Tab -->
+        <div class="tab-pane fade" id="desserts" role="tabpanel" aria-labelledby="desserts-tab">
+            <div class="row mt-4">
+                <div class="col-md-6 menu-item">
+                    <img src="img/tiramisu.jpg" alt="Tiramisu" class="img-fluid">
+                    <h5>Tiramisu</h5>
+                    <p>A classic Italian dessert made with coffee and mascarpone cheese.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="6" data-name="Tiramisu" data-price="6">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert1-details">Details</button>
+                    <div id="dessert1-details" class="collapse mt-2">
+                        <p>Layers of coffee-soaked ladyfingers and creamy mascarpone topped with cocoa powder.</p>
+                    </div>
+                </div>
+                <!-- Additional Desserts -->
+                <div class="col-md-6 menu-item">
+                    <img src="img/cheesecake.jpg" alt="Cheesecake" class="img-fluid">
+                    <h5>New York Cheesecake</h5>
+                    <p>Rich and creamy cheesecake with a graham cracker crust.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="7" data-name="New York Cheesecake" data-price="8">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert2-details">Details</button>
+                    <div id="dessert2-details" class="collapse mt-2">
+                        <p>Served with a berry compote.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 menu-item">
+                    <img src="img/cheesecake.jpg" alt="Cheesecake" class="img-fluid">
+                    <h5>New York Cheesecake</h5>
+                    <p>Rich and creamy cheesecake with a graham cracker crust.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="7" data-name="New York Cheesecake" data-price="8">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert2-details">Details</button>
+                    <div id="dessert2-details" class="collapse mt-2">
+                        <p>Served with a berry compote.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 menu-item">
+                    <img src="img/cheesecake.jpg" alt="Cheesecake" class="img-fluid">
+                    <h5>New York Cheesecake</h5>
+                    <p>Rich and creamy cheesecake with a graham cracker crust.</p>
+                    <button class="btn btn-primary add-to-cart-btn" data-id="7" data-name="New York Cheesecake" data-price="8">Add to Cart</button>
+                    <button class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#dessert2-details">Details</button>
+                    <div id="dessert2-details" class="collapse mt-2">
+                        <p>Served with a berry compote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+                    
+                </div>
+                
+                </div>
+
+
+
+
+
+
+                
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row text-center text-md-start">
+                    <div class="col-md-3 footer-section">
+                        <h5><i class="fas fa-map-marker-alt"></i> Address</h5>
+                        <p>A108 Adam Street<br>New York, NY 535022</p>
+                    </div>
+                    <div class="col-md-3 footer-section">
+                        <h5><i class="fas fa-phone-alt"></i> Contact</h5>
+                        <p>Phone: +1 5589 55488 55<br>Email: info@example.com</p>
+                    </div>
+                    <div class="col-md-3 footer-section">
+                        <h5><i class="fas fa-clock"></i> Opening Hours</h5>
+                        <p>Mon-Sat: 11AM - 11PM<br>Sunday: Closed</p>
+                    </div>
+                    <div class="col-md-3 footer-section">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+                </body>      
+
+            <!-- JavaScript Logic for Cart -->
+            <script>
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                function updateCartCount() {
+                    const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+                    document.getElementById('cart-count').textContent = cartCount;
+                }
+
+                function addToCart(id, name, price) {
+                    const existingItem = cart.find(item => item.id === id);
+
+                    if (existingItem) {
+                        existingItem.quantity++;
+                    } else {
+                        cart.push({ id, name, price, quantity: 1 });
+                    }
+
+                    // Save cart to localStorage
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    updateCartCount();
+                }
+
+                document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                    button.addEventListener('click', function () {
+                        const id = parseInt(this.getAttribute('data-id'));
+                        const name = this.getAttribute('data-name');
+                        const price = parseFloat(this.getAttribute('data-price'));
+                        addToCart(id, name, price);
+                    });
+                });
+
+                // Update cart count on page load
+                window.onload = updateCartCount;
+            </script>
+
+            <!-- Bootstrap JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

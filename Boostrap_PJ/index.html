@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -28,7 +30,7 @@
                         <a class="nav-link me-lg-3" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="menulist1.html">Menu</a>
+                        <a class="nav-link me-lg-3" href="menus.html">Menu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="chef.html">Chefs</a>
@@ -44,6 +46,14 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link me-lg-3" href="register.html">Register</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart" style="font-size: 1.5rem;"></i>
+                            <span id="cart-count" class="badge bg-secondary">0</span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -150,34 +160,21 @@
                 <img src="img/freshsalmon.jpg" class="img-fluid float-start me-3" alt="Dish 1">  
                 <h5 class="mb-1">Fresh Salmon</h5>  
                 <p class="mb-1">A perfectly grilled, wild-caught fresh salmon fillet served with a side of sautéed spinach and roasted baby potatoe</p>  
-                <!-- <div id="dish1" class="collapse">  
-                    <div class="mt-2">  
-                        Fresh basil, parsley, and oregano make it special!  
-                    </div>  
-                </div>   -->
+                
                 <button class="btn btn-primary mt-2" onclick="window.location.href='salmon.html'">View</button>
-            </div>  
+                    </div>  
             <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish2" aria-expanded="false" aria-controls="dish2" style="cursor: pointer;">  
-                <img src="img/photo3.jpg" class="img-fluid float-start me-3" alt="Dish 2">  
-                <h5 class="mb-1">Dish 2</h5>  
+                <img src="img/photo3 (1) (1) (1).jpg" class="img-fluid float-start me-3" alt="Dish 2">  
+                <h5 class="mb-1">Rice with curry and chicken</h5>  
                 <p class="mb-1">A scrumptious meal that will tickle your taste buds.</p>  
-                <!-- <div id="dish2" class="collapse">  
-                    <div class="mt-2">  
-                        Made with organic ingredients and spices!  
+                
+                <button class="btn btn-primary mt-2" onclick="window.location.href='curry.html'">View</button>
                     </div>  
-                </div>   -->
-                <button class="btn btn-primary mt-2">View</button>  
-            </div>  
             <div class="list-group-item dish" data-bs-toggle="collapse" data-bs-target="#dish3" aria-expanded="false" aria-controls="dish3" style="cursor: pointer;">  
-                <img src="img/chicken150.jpg" class="img-fluid float-start me-3" alt="Dish 3">  
-                <h5 class="mb-1">Dish 3</h5>  
+                <img src="img/dish3.jpg" class="img-fluid float-start me-3" alt="Dish 3">  
+                <h5 class="mb-1">Grilled Chicken Caesar Salad</h5>  
                 <p class="mb-1">An exquisite dish that combines flavors from around the world.</p>  
-                <!-- <div id="dish3" class="collapse">  
-                    <div class="mt-2">  
-                        Featuring spices from India, Italy, and Mexico!  
-                    </div>  
-                </div>   -->
-                <button class="btn btn-primary mt-2">View</button>  
+                <button class="btn btn-primary mt-2" onclick="window.location.href='chickencaesarsalad.html'">View</button>
             </div>  
         </div>  
     </div>

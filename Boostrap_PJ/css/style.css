@@ -126,7 +126,7 @@ hr{
 
 .card-body p {
     font-size: 1.1rem;
-    color: #d9534f;
+    /* color: #d9534f;   */
 }
 
 .text-left {
